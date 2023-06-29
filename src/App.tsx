@@ -1,7 +1,15 @@
+import { useState } from "react";
 import "./App.css";
+import Inputfield from "./components/Inputfield";
 
 function App() {
-  return <div className="App">Hello World</div>;
+  const [todo, setTodo] = useState<string>("");
+
+  return (
+    <div className="App">
+      <Inputfield todo={todo} setTodo={setTodo} />
+    </div>
+  );
 }
 
 export default App;
